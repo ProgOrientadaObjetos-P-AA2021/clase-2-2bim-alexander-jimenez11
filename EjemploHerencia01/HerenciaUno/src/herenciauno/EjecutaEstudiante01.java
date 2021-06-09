@@ -11,11 +11,11 @@ import java.util.Scanner;
 public class EjecutaEstudiante01 {
 
     public static void main(String[] args) {
-
         // a.  Declarar Variables
         Scanner entrada = new Scanner(System.in);
-        entrada.useLocale(Locale.US);
-
+        entrada.useLocale(Locale.US);// siempre use como separador de decimales
+                                     // el punto
+        
         String nombresEst;
         String apellidosEst;
         String identificacionEst;
@@ -24,11 +24,10 @@ public class EjecutaEstudiante01 {
         int numeroCreds;
         double costoAsig;
         int numeroAsigs;
-        
 
         // Ingresar información para un objeto EstudiantePresencial
         System.out.println("Ingrese datos para estudiante presencial");
-        
+
         System.out.println("Ingrese el nombre del estudiante");
         nombresEst = entrada.nextLine();
 
@@ -54,9 +53,9 @@ public class EjecutaEstudiante01 {
         System.out.println("Ingrese el costo de cada crédito "
                 + "del estudiante");
         costoCred = entrada.nextDouble();
-        
+
         entrada.nextLine();
-        
+
         // se hace uso de los métodos establecer para asignar valores
         // a los datos (atributos) del objeto
         // Establecer:  
@@ -76,9 +75,8 @@ public class EjecutaEstudiante01 {
         // se hace uso de los métodos obtener del objeto para presentar
         // los valores que se necesite en pantalla
         // Imprimir:
-        
         System.out.println("Datos del estudiante Presencial");
-        
+
         System.out.printf("Nombre: %s\n",
                 estudianteP.obtenerNombresEstudiante());
         System.out.printf("Apelllido: %s\n",
@@ -90,7 +88,6 @@ public class EjecutaEstudiante01 {
         System.out.printf("Matricula final $: %.2f\n",
                 estudianteP.obtenerMatriculaPresencial());
 
-        
         System.out.println("\nIngrese datos para estudiante distancia");
         // Declarar,crear e iniciar objeto tipo EstudianteDistancia
         EstudianteDistancia estudianteD = new EstudianteDistancia();
@@ -147,7 +144,5 @@ public class EjecutaEstudiante01 {
                 estudianteD.obtenerEdadEstudiante());
         System.out.printf("Matricula: %.2f\n",
                 estudianteD.obtenerMatriculaDistancia());
-
     }
-//    
 }

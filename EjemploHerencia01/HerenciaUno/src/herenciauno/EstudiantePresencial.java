@@ -40,6 +40,5 @@ public class EstudiantePresencial extends Estudiante{
     // 7. Método obtenerMatriculaPresencial() : Real
     public double obtenerMatriculaPresencial(){
         return matriculaPresencial;
-    }
-    
+    } 
 }
